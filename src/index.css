@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Manrope', system-ui, sans-serif;
+  --color-accent: #b45309;
+  --color-accent-dark: #92400e;
+  --color-accent-soft: #fef3c7;
+}
+
+html {
+  font-family: var(--font-sans);
+}
+
+body {
+  background-color: #faf7f2;
+  color: #181818;
+}
+
+h1, h2, h3 {
+  text-wrap: balance;
+}
+
+p, span, label {
+  text-wrap: pretty;
+}
+
+button, a, input, select, textarea {
+  transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+button:active, a:active {
+  transform: scale(0.98);
+}
+
+:focus-visible {
+  outline: 2px solid #b45309;
+  outline-offset: 2px;
+}
+
+.heading-1 { font-size: 3.75rem; line-height: 1; font-weight: 600; }
+.heading-3 { font-size: 2.25rem; line-height: 2.5rem; font-weight: 600; }
+.heading-5 { font-size: 1.5rem; line-height: 2rem; font-weight: 600; }
+.title-1 { font-size: 1.25rem; line-height: 1.75rem; font-weight: 500; }
+.title-3 { font-size: 1rem; line-height: 1.5rem; font-weight: 500; }
+.body-3 { font-size: 1rem; line-height: 1.5rem; font-weight: 400; }
+.body-5 { font-size: 0.875rem; line-height: 1.25rem; font-weight: 500; }
+.caption-2 { font-size: 0.875rem; line-height: 1.25rem; font-weight: 400; }
+.caption-4 { font-size: 0.75rem; line-height: 1rem; font-weight: 500; }
+
+.hero-gradient {
+  background: linear-gradient(to left, #ffffff, #9b9b9b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
